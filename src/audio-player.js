@@ -343,8 +343,9 @@ export default class extends Controller {
 
     generatePlayerElements() {
         // Create the player container
+        this.element.classList.add('_saw_player_wrapper')
+
         const playerContainer = document.createElement('div');
-        playerContainer.classList.add('_saw_player_wrapper')
         playerContainer.classList.add('_saw_player');
 
         // Create the play button
@@ -355,7 +356,6 @@ export default class extends Controller {
         playButton.classList.add('_saw_play_btn');
         playButton.classList.add('mdi')
         playButton.classList.add('mdi-play')
-        playButton.style.color = '#333'
         playerContainer.appendChild(playButton);
 
 
