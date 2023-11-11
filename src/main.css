@@ -16,11 +16,24 @@
     border-radius: 3rem;
 }
 
-._saw_player ._saw_play_btn {
+._saw_player ._saw_record_btn {
     font-size: 2.5rem!important;
     padding: 0 0.5rem;
     z-index: 10;
     margin-right: 15px;
+}
+
+._saw_player ._saw_record_btn:hover {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.05);;
+}
+
+._saw_player ._saw_play_btn {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
 }
 
 ._saw_player ._saw_play_btn:hover {
