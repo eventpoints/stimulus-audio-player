@@ -1,6 +1,6 @@
 {
   "name": "stimulus-audio-player",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A Stimulus controller to enable audio playing.",
   "keywords": [
     "stimulus",
@@ -36,7 +36,6 @@
     "@hotwired/stimulus": "^3.1.0"
   },
   "dependencies": {
-    "@mdi/font": "^7.3.67",
     "animejs": "^3.2.1",
     "autoprefixer": "^10.4.16",
     "css-loader": "^6.8.1",
