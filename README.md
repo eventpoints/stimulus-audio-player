@@ -2,7 +2,7 @@
 Date and time input stimulus controller.
 
 ### Demo
-Coming soon...
+[Stimulus Audio Player Demo](https://gregarious-treacle-078ba8.netlify.app/)
 
 ### Installation
 
