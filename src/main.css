@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-@import "@mdi/font/css/materialdesignicons.min.css";
+@import "https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css";
 
 /** default theme **/
 
@@ -107,6 +107,14 @@
     max-height: 60px;
     z-index: 0;
 }
+
+._saw_theme_default ._saw_svg_path{
+    fill: #2962ff;
+}
+
+
+
+
 
 
 /*dark theme*/
@@ -219,6 +227,13 @@
     z-index: 0;
 }
 
+
+._saw_theme_dark ._saw_svg_path{
+    fill: rgba(0,0,0,0.5)
+}
+
+
+
 /*light theme*/
 
 
@@ -325,4 +340,8 @@
     width: 100%;
     max-height: 60px;
     z-index: 0;
+}
+
+._saw_theme_light ._saw_svg_path{
+    fill: rgba(255,255,255,0.9)
 }

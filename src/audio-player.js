@@ -205,7 +205,6 @@ export default class extends Controller {
 
     resolveTheme() {
 
-        this.fill = 'rgba(255,255,255,1)'
         const themes = ['light', 'default', 'dark'];
 
         this.element.classList.remove('_saw_theme_light')
@@ -215,13 +214,10 @@ export default class extends Controller {
         if (themes.includes(this.themeValue)) {
             if (this.themeValue === 'light') {
                 this.element.classList.add('_saw_theme_light')
-                this.fill = 'rgba(255,255,255,0.9)'
             } else if (this.themeValue === 'dark') {
                 this.element.classList.add('_saw_theme_dark')
-                this.fill = 'rgba(0,0,0,0.5)'
             } else {
                 this.element.classList.add('_saw_theme_default')
-                this.fill = '#2962ff'
             }
         }
     }
@@ -335,7 +331,6 @@ export default class extends Controller {
         anime({
             width: '100%',
             targets: rect,
-            fill: this.fill,
             easing: 'easeOutQuad',
             duration: 100 // Set your desired animation duration
         });
@@ -400,8 +395,8 @@ export default class extends Controller {
         // Create the path for the visualizer
         const visualizerPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
         visualizerPath.setAttribute('d', '');
+        visualizerPath.classList.add('_saw_svg_path')
         visualizerPath.style.width = '100%!important';
-        visualizerPath.style.fill = this.fill;
         visualizerPath.setAttribute('data-audio-player-target', 'rect');
 
         // Append the path to the SVG
