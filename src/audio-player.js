@@ -344,7 +344,7 @@ export default class extends Controller {
     generatePlayerElements() {
         // Create the player container
         const playerContainer = document.createElement('div');
-        playerContainer.classList.add('_sap_player_wrapper')
+        playerContainer.classList.add('_saw_player_wrapper')
         playerContainer.classList.add('_saw_player');
 
         // Create the play button
