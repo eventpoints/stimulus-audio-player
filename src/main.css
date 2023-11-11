@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 @import "@mdi/font/css/materialdesignicons.min.css";
 
-._sap_player_wrapper {
+/** default theme **/
+
+._saw_theme_default._saw_player_wrapper {
     position: relative;
     overflow: hidden;
     border-radius: 3rem;
 }
 
-._saw_player {
+._saw_theme_default ._saw_player {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -16,34 +18,34 @@
     border-radius: 3rem;
 }
 
-._saw_player ._saw_record_btn {
+._saw_theme_default ._saw_record_btn {
     font-size: 2.5rem!important;
     padding: 0 0.5rem;
     z-index: 10;
     margin-right: 15px;
 }
 
-._saw_player ._saw_record_btn:hover {
+._saw_theme_default ._saw_record_btn:hover {
     font-size: 2.5rem!important;
     padding: 0 0.5rem;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.05);;
 }
 
-._saw_player ._saw_play_btn {
+._saw_theme_default ._saw_play_btn {
     font-size: 2.5rem!important;
     padding: 0 0.5rem;
     z-index: 10;
 }
 
-._saw_player ._saw_play_btn:hover {
+._saw_theme_default ._saw_play_btn:hover {
     background-color: rgba(0, 0, 0, 0.05);;
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3rem;
 }
 
 
-._saw_player ._saw_seek {
+._saw_theme_default ._saw_seek {
     width: 70%;
     z-index: 10;
     height: 1.5rem;
@@ -55,14 +57,14 @@
     padding-right: 15px;
 }
 
-._saw_player ._saw_seek[type="range"] {
+._saw_theme_default ._saw_seek[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
     cursor: pointer;
 }
 
-._saw_player ._saw_seek[type="range"]::-webkit-slider-thumb {
+._saw_theme_default ._saw_seek::-webkit-slider-thumb {
     margin-top: -6px;
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -73,14 +75,14 @@
     vertical-align: center;
 }
 
-._saw_player ._saw_seek[type="range"]::-webkit-slider-runnable-track {
+._saw_theme_default ._saw_seek::-webkit-slider-runnable-track {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 0.5rem;
     height: 0.2rem;
     z-index: 10;
 }
 
-._saw_player ._saw_audio_player_time {
+._saw_theme_default ._saw_audio_player_time {
     margin-right: 1.5rem;
     font-size: 24px;
     font-weight: bold;
@@ -88,24 +90,239 @@
     width: 15%;
 }
 
-._saw_visualiser_wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    height: 100%;
+._saw_theme_default ._saw_visualiser_wrapper {
+    position: relative;
     width: 100%;
-    z-index: 1;
+    max-height: 60px;
     background-color: transparent;
+    z-index: 5;
 }
 
-._saw_visualiser_wrapper ._saw_visualiser {
+._saw_theme_default ._saw_visualiser {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     max-height: 60px;
-    z-index: 100;
+    z-index: 0;
+}
+
+
+/*dark theme*/
+
+._saw_theme_dark._saw_player_wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3rem;
+    color: rgba(255,255,255,0.75)!important;
+}
+
+._saw_theme_dark ._saw_player {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 3rem;
+}
+
+._saw_theme_dark ._saw_record_btn {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    margin-right: 15px;
+    color: rgba(255,255,255,0.7)!important;
+}
+
+._saw_theme_dark ._saw_record_btn:hover {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+._saw_theme_dark ._saw_play_btn {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    color: rgba(255,255,255,0.7)!important;
+}
+
+._saw_theme_dark ._saw_play_btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+
+._saw_theme_dark ._saw_seek {
+    width: 70%;
+    z-index: 10;
+    height: 1.5rem;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    padding-right: 15px;
+}
+
+._saw_theme_dark ._saw_seek[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+._saw_theme_dark ._saw_seek::-webkit-slider-thumb {
+    margin-top: -6px;
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background-color: rgba(255,255,255,0.7);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    vertical-align: center;
+}
+
+._saw_theme_dark ._saw_seek::-webkit-slider-runnable-track {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 0.5rem;
+    height: 0.2rem;
+    z-index: 10;
+}
+
+._saw_theme_dark ._saw_audio_player_time {
+    margin-right: 1.5rem;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+    width: 15%;
+}
+
+._saw_theme_dark ._saw_visualiser_wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 60px;
+    background-color: transparent;
+    z-index: 5;
+}
+
+._saw_theme_dark ._saw_visualiser {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 60px;
+    z-index: 0;
+}
+
+/*light theme*/
+
+
+._saw_theme_light._saw_player_wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3rem;
+}
+
+._saw_theme_light ._saw_player {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 3rem;
+}
+
+._saw_theme_light ._saw_record_btn {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    margin-right: 15px;
+}
+
+._saw_theme_light ._saw_record_btn:hover {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.05);;
+}
+
+._saw_theme_light ._saw_play_btn {
+    font-size: 2.5rem!important;
+    padding: 0 0.5rem;
+    z-index: 10;
+}
+
+._saw_theme_light ._saw_play_btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+
+._saw_theme_light ._saw_seek {
+    width: 70%;
+    z-index: 10;
+    height: 1.5rem;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    padding-right: 15px;
+}
+
+._saw_theme_light ._saw_seek[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+._saw_theme_light ._saw_seek::-webkit-slider-thumb {
+    margin-top: -6px;
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background-color: #333;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    vertical-align: center;
+}
+
+._saw_theme_light ._saw_seek::-webkit-slider-runnable-track {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    height: 0.2rem;
+    z-index: 10;
+}
+
+._saw_theme_light ._saw_audio_player_time {
+    margin-right: 1.5rem;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+    width: 15%;
+}
+
+._saw_theme_light ._saw_visualiser_wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 60px;
+    background-color: transparent;
+    z-index: 5;
+}
+
+._saw_theme_light ._saw_visualiser {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 60px;
+    z-index: 0;
 }

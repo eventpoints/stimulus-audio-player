@@ -191,6 +191,11 @@ export default class extends Controller {
                 this.updateVisualizer();
                 resolve();
             };
+
+            this.audio.ontimeupdate = () => {
+                this.seekTarget.setAttribute('value', (this.audio.currentTime / this.audio.duration * 100))
+                this.timeTarget.textContent = this.fmtTime(this.audio.currentTime);
+            };
         });
     }
     updateVisualizer() {
@@ -202,12 +207,20 @@ export default class extends Controller {
 
         this.fill = 'rgba(255,255,255,1)'
         const themes = ['light', 'default', 'dark'];
+
+        this.element.classList.remove('_saw_theme_light')
+        this.element.classList.remove('_saw_theme_dark')
+        this.element.classList.remove('_saw_theme_default')
+
         if (themes.includes(this.themeValue)) {
             if (this.themeValue === 'light') {
-                this.fill = 'rgba(255,255,255,1)'
+                this.element.classList.add('_saw_theme_light')
+                this.fill = 'rgba(255,255,255,0.9)'
             } else if (this.themeValue === 'dark') {
-                this.fill = 'rgba(0,0,0,0.07)'
+                this.element.classList.add('_saw_theme_dark')
+                this.fill = 'rgba(0,0,0,0.5)'
             } else {
+                this.element.classList.add('_saw_theme_default')
                 this.fill = '#2962ff'
             }
         }
@@ -354,7 +367,6 @@ export default class extends Controller {
             recordButton.classList.add('_saw_record_btn');
             recordButton.classList.add('mdi')
             recordButton.classList.add('mdi-record')
-            recordButton.style.color = '#333'
             playerContainer.appendChild(recordButton);
         }
 
@@ -373,7 +385,6 @@ export default class extends Controller {
         const timeDisplay = document.createElement('div');
         timeDisplay.classList.add('_saw_audio_player_time');
         timeDisplay.setAttribute('data-audio-player-target', 'time');
-        timeDisplay.style.color = '#333'
         playerContainer.appendChild(timeDisplay);
 
 
