@@ -83,7 +83,8 @@
 }
 
 ._saw_theme_default ._saw_audio_player_time {
-    margin-right: 1.5rem;
+    text-align: right;
+    margin-right: 1rem;
     font-size: 24px;
     font-weight: bold;
     z-index: 10;
@@ -158,7 +159,7 @@
 }
 
 ._saw_theme_dark ._saw_play_btn:hover {
-    background-color: rgba(0, 0, 0, 0.05);;
+    background-color: rgba(0, 0, 0, 0.05);
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3rem;
 }
@@ -202,7 +203,8 @@
 }
 
 ._saw_theme_dark ._saw_audio_player_time {
-    margin-right: 1.5rem;
+    text-align: right;
+    margin-right: 1rem;
     font-size: 24px;
     font-weight: bold;
     z-index: 10;
@@ -317,7 +319,8 @@
 }
 
 ._saw_theme_light ._saw_audio_player_time {
-    margin-right: 1.5rem;
+    text-align: right;
+    margin-right: 1rem;
     font-size: 24px;
     font-weight: bold;
     z-index: 10;
